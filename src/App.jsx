@@ -5,7 +5,7 @@ import { setCurrentUser } from './redux/user/user.actions';
 import { auth, createUserProfileDocument } from './firebase/config';
 import './App.css';
 import HomePage from './pages/home/Homepage';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, Redirect } from 'react-router-dom';
 import ShopPage from './pages/shop/Shop';
 import Header from './components/header/Header';
 import Signinsignup from './pages/signinsignup/Signinsignup';
@@ -26,7 +26,6 @@ function App() {
 					SetCurrentUser({ id: snapshot.id, ...snapshot.data() })
 				);
 			} else {
-				console.log(userAuth);
 				SetCurrentUser(userAuth);
 			}
 		});
@@ -43,7 +42,11 @@ function App() {
 			<Switch>
 				<Route exact path='/' component={HomePage} />
 				<Route exact path='/shop/' component={ShopPage} />
-				<Route path='/signin/' component={Signinsignup} />
+				<Route
+					exact
+					path='/signin/'
+					render={() => (currentUser ? <Redirect to='/' /> : <Signinsignup />)}
+				/>
 			</Switch>
 		</div>
 	);

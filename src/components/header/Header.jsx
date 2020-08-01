@@ -1,13 +1,16 @@
 import React from 'react';
-
-import './Header.scss';
 import { Link } from 'react-router-dom';
-
-import { auth } from '../../firebase/config';
+import { useSelector, useDispatch } from 'react-redux';
 
 import { ReactComponent as Logo } from '../../assests/logo.svg';
+import { auth } from '../../firebase/config';
+import './Header.scss';
+import { setCurrentUser } from '../../redux/user/user.actions';
 
-const Header = ({ currentUser, SetCurrentUser }) => {
+const Header = () => {
+	const currentUser = useSelector((state) => state.user.currentUser);
+	const dispatch = useDispatch();
+	const SetCurrentUser = (user) => dispatch(setCurrentUser(user));
 	return (
 		<>
 			<div className='header'>
@@ -26,7 +29,8 @@ const Header = ({ currentUser, SetCurrentUser }) => {
 							className='option'
 							onClick={() => {
 								auth.signOut();
-								SetCurrentUser(null);
+
+								SetCurrentUser({});
 							}}
 						>
 							Sign Out

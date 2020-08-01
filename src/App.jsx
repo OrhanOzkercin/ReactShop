@@ -1,5 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 
+import { setCurrentUser } from './redux/user/user.actions';
 import { auth, createUserProfileDocument } from './firebase/config';
 import './App.css';
 import HomePage from './pages/home/Homepage';
@@ -9,7 +11,11 @@ import Header from './components/header/Header';
 import Signinsignup from './pages/signinsignup/Signinsignup';
 
 function App() {
-	const [currentUser, SetCurrentUser] = useState(null);
+	const currentUser = useSelector((state) => state.user.currentUser);
+	const dispatch = useDispatch();
+
+	const SetCurrentUser = (user) =>
+		dispatch(setCurrentUser(user)); /* {type:'SET_CURRENT_USER, payload: user}*/
 
 	useEffect(() => {
 		const unsub = auth.onAuthStateChanged(async (userAuth) => {
@@ -20,6 +26,7 @@ function App() {
 					SetCurrentUser({ id: snapshot.id, ...snapshot.data() })
 				);
 			} else {
+				console.log(userAuth);
 				SetCurrentUser(userAuth);
 			}
 		});
@@ -27,12 +34,12 @@ function App() {
 		return () => {
 			unsub();
 		};
-	}, []);
+		// eslint-disable-next-line
+	}, [dispatch]);
 
-	console.log(currentUser);
 	return (
 		<div className='App'>
-			<Header currentUser={currentUser} SetCurrentUser={SetCurrentUser} />
+			<Header currentUser={currentUser} />
 			<Switch>
 				<Route exact path='/' component={HomePage} />
 				<Route exact path='/shop/' component={ShopPage} />

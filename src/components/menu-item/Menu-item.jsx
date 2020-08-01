@@ -11,7 +11,6 @@ const MenuItem = ({
 	match,
 	location,
 }) => {
-	console.log(history, match, location);
 	return (
 		<div
 			className={`menu-item ${size}`}

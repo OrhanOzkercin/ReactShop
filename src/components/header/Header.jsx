@@ -7,7 +7,7 @@ import { auth } from '../../firebase/config';
 
 import { ReactComponent as Logo } from '../../assests/logo.svg';
 
-const Header = ({ currentUser }) => {
+const Header = ({ currentUser, SetCurrentUser }) => {
 	return (
 		<>
 			<div className='header'>
@@ -22,7 +22,13 @@ const Header = ({ currentUser }) => {
 						Contact
 					</Link>
 					{currentUser ? (
-						<div className='option' onClick={auth.signOut}>
+						<div
+							className='option'
+							onClick={() => {
+								auth.signOut();
+								SetCurrentUser(null);
+							}}
+						>
 							Sign Out
 						</div>
 					) : (

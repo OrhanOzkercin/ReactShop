@@ -9,6 +9,7 @@
 		height: 100%;
 		width: 40px;
 		padding: 20px;
+		box-sizing: content-box;
 	}
 
 	.options {
@@ -20,6 +21,7 @@
 
 		.option {
 			padding: 10px 15px;
+			cursor: pointer;
 		}
 	}
 }

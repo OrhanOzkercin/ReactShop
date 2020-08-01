@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-import { auth } from './firebase/config';
-
+import { auth, createUserProfileDocument } from './firebase/config';
 import './App.css';
 import HomePage from './pages/home/Homepage';
 import { Switch, Route } from 'react-router-dom';
@@ -11,17 +10,28 @@ import Signinsignup from './pages/signinsignup/Signinsignup';
 
 function App() {
 	const [currentUser, SetCurrentUser] = useState(null);
+
 	useEffect(() => {
-		const unsub = auth.onAuthStateChanged((user) => {
-			SetCurrentUser(user);
+		const unsub = auth.onAuthStateChanged(async (userAuth) => {
+			if (userAuth) {
+				const userRef = await createUserProfileDocument(userAuth);
+
+				userRef.onSnapshot((snapshot) =>
+					SetCurrentUser({ id: snapshot.id, ...snapshot.data() })
+				);
+			} else {
+				SetCurrentUser(userAuth);
+			}
 		});
+
 		return () => {
 			unsub();
 		};
-	}, [currentUser, SetCurrentUser]);
+	}, []);
+
 	return (
 		<div className='App'>
-			<Header currentUser={currentUser} />
+			<Header currentUser={currentUser} SetCurrentUser={SetCurrentUser} />
 			<Switch>
 				<Route exact path='/' component={HomePage} />
 				<Route exact path='/shop/' component={ShopPage} />

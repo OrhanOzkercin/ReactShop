@@ -1,4 +1,6 @@
 .custom-button {
+	display: flex;
+	justify-content: center;
 	min-width: 165px;
 	width: auto;
 	height: 50px;
@@ -24,6 +26,14 @@
 		color: white;
 		&:hover {
 			background-color: #357ae8;
+		}
+	}
+	&.inverted {
+		background-color: white;
+		color: black;
+		&:hover {
+			background-color: black;
+			color: white;
 		}
 	}
 }

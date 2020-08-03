@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 
-import SHOP_DATA from './Shopdata';
 import CollectionPreview from '../../components/collection-preview/collection-preview';
+import { useSelector } from 'react-redux';
+import { selectShopItems } from '../../redux/shop/shop.selectors';
 
 const ShopPage = () => {
-	const [collections, SetCollections] = useState(SHOP_DATA);
+	const collections = useSelector((state) => selectShopItems(state));
 	return (
 		<div className='shop-page'>
 			{collections.map(({ id, ...props }) => (

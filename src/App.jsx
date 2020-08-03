@@ -6,10 +6,11 @@ import { auth, createUserProfileDocument } from './firebase/config';
 import './App.css';
 import HomePage from './pages/home/Homepage';
 import { Switch, Route, Redirect } from 'react-router-dom';
-import ShopPage from './pages/shop/Shop';
+import ShopPage from './pages/shop/Shoppage';
 import Header from './components/header/Header';
 import Signinsignup from './pages/signinsignup/Signinsignup';
 import { selectCurrentUser } from './redux/user/user.selectors';
+import Checkoutpage from './pages/checkout/Checkoutpage';
 
 function App() {
 	const currentUser = useSelector((state) => selectCurrentUser(state));
@@ -48,6 +49,7 @@ function App() {
 					path='/signin/'
 					render={() => (currentUser ? <Redirect to='/' /> : <Signinsignup />)}
 				/>
+				<Route path='/checkout' component={Checkoutpage} />
 			</Switch>
 		</div>
 	);

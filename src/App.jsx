@@ -9,9 +9,10 @@ import { Switch, Route, Redirect } from 'react-router-dom';
 import ShopPage from './pages/shop/Shop';
 import Header from './components/header/Header';
 import Signinsignup from './pages/signinsignup/Signinsignup';
+import { selectCurrentUser } from './redux/user/user.selectors';
 
 function App() {
-	const currentUser = useSelector((state) => state.user.currentUser);
+	const currentUser = useSelector((state) => selectCurrentUser(state));
 	const dispatch = useDispatch();
 
 	const SetCurrentUser = (user) =>

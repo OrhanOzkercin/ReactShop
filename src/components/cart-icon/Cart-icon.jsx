@@ -4,12 +4,12 @@ import { ReactComponent as Basket } from '../../assests/basket.svg';
 import './Cart-icon.scss';
 import { useDispatch, useSelector } from 'react-redux';
 import { toggleCartHidden } from '../../redux/cart/cart.actions';
+import { selectCartItems } from '../../redux/cart/cart.selectors';
 
 const CartIcon = () => {
 	const dispatch = useDispatch();
 	const itemsCount = useSelector((state) => {
-		console.log('called');
-		return state.cart.cartItems.reduce(
+		return selectCartItems(state).reduce(
 			(acc, cartItem) => acc + cartItem.quantity,
 			0
 		);

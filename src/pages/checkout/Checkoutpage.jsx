@@ -8,7 +8,7 @@ import {
 } from '../../redux/cart/cart.selectors';
 import CheckoutItem from '../../components/checkout-item/Checkout-item';
 
-const Checkoutpage = () => {
+const CheckoutPage = () => {
 	const cartItems = useSelector((state) => selectCartItems(state));
 	const cartItemsTotalCost = useSelector((state) => selectCartTotalCost(state));
 
@@ -42,4 +42,4 @@ const Checkoutpage = () => {
 	);
 };
 
-export default Checkoutpage;
+export default CheckoutPage;

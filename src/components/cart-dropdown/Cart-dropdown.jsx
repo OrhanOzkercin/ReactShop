@@ -7,6 +7,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { selectCartItems } from '../../redux/cart/cart.selectors';
 import { useHistory } from 'react-router-dom';
 import { toggleCartHidden } from '../../redux/cart/cart.actions';
+
 const CartDropdown = () => {
 	const cartItems = useSelector((state) => selectCartItems(state));
 	const dispatch = useDispatch();

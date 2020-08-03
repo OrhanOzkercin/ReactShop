@@ -8,7 +8,6 @@ import './Header.scss';
 import { setCurrentUser } from '../../redux/user/user.actions';
 import CartIcon from '../cart-icon/Cart-icon';
 import CartDropdown from '../cart-dropdown/Cart-dropdown';
-import { toggleCartHidden } from '../../redux/cart/cart.actions';
 
 const Header = () => {
 	const currentUser = useSelector((state) => state.user.currentUser);

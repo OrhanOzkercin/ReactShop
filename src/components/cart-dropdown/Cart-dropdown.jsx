@@ -12,7 +12,6 @@ const CartDropdown = () => {
 	const dispatch = useDispatch();
 	const toggleCartDropdown = () => dispatch(toggleCartHidden());
 	const history = useHistory();
-	console.log(cartItems);
 	return (
 		<div className='cart-dropdown'>
 			<div className='cart-items'>

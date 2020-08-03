@@ -4,4 +4,6 @@ export const UserActionTyes = {
 export const CartActionTyes = {
 	ADD_ITEM: 'ADD_ITEM',
 	TOGGLE_CART_HIDDEN: 'TOGGLE_CART_HIDDEN',
+	REMOVE_ITEM: 'REMOVE_ITEM',
+	DECREASE_QUANTITY: 'DECREASE_QUANTITY',
 };

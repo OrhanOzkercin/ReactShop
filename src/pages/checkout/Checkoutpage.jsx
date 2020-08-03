@@ -11,6 +11,7 @@ import CheckoutItem from '../../components/checkout-item/Checkout-item';
 const Checkoutpage = () => {
 	const cartItems = useSelector((state) => selectCartItems(state));
 	const cartItemsTotalCost = useSelector((state) => selectCartTotalCost(state));
+
 	return (
 		<div className='checkout-page'>
 			<div className='checkout-header'>
@@ -30,6 +31,7 @@ const Checkoutpage = () => {
 					<span>Remove</span>
 				</div>
 			</div>
+
 			{cartItems.map((item) => (
 				<CheckoutItem key={item.id} cartItem={item} />
 			))}

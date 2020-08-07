@@ -1,21 +1,27 @@
 import React from 'react';
 
-import './Collectionpage.scss';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { selectCollection } from '../../redux/shop/shop.selectors';
+import CollectionItem from '../../components/collection-item/collection-item';
 
-const CategoryPage = ({ match }) => {
+import './Collectionpage.scss';
+
+const CollectionPage = ({ match }) => {
 	const collection = useSelector((state) =>
 		selectCollection(match.params.collectionId)(state)
 	);
 
-	console.log(collection);
-
+	const { title, items } = collection;
 	return (
-		<div className='category'>
-			<h2>CategoryPAge</h2>
+		<div className='collection-page'>
+			<h2 className='title'>{title}</h2>
+			<div className='items'>
+				{items.map((item) => (
+					<CollectionItem key={item.id} item={item} />
+				))}
+			</div>
 		</div>
 	);
 };
 
-export default CategoryPage;
+export default CollectionPage;

@@ -7,6 +7,7 @@ import {
 	selectCartTotalCost,
 } from '../../redux/cart/cart.selectors';
 import CheckoutItem from '../../components/checkout-item/Checkout-item';
+import StripeCheckoutButton from '../../components/stripe-button/Stripe-button';
 
 const CheckoutPage = () => {
 	const cartItems = useSelector((state) => selectCartItems(state));
@@ -31,13 +32,18 @@ const CheckoutPage = () => {
 					<span>Remove</span>
 				</div>
 			</div>
-
 			{cartItems.map((item) => (
 				<CheckoutItem key={item.id} cartItem={item} />
 			))}
 			<div className='total'>
 				<span>TOTAL ₺{cartItemsTotalCost}</span>
 			</div>
+			<div className='test-warning'>
+				*Please use credit card information below for test-warning
+				<br />
+				4242 4242 4242 4242 4242 - Exp: 01/21 - CVV: 123
+			</div>
+			<StripeCheckoutButton price={cartItemsTotalCost} />
 		</div>
 	);
 };

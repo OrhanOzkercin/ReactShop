@@ -1,12 +1,20 @@
 import React from 'react';
 
-import './Checkout-item.scss';
 import {
 	removeCartItem,
 	decreaseQuantity,
 	addCartItem,
 } from '../../redux/cart/cart.actions';
 import { useDispatch } from 'react-redux';
+import {
+	CheckoutItemContainer,
+	ImageContainer,
+	SpanWidth23,
+	Quantity,
+	Arrow,
+	Value,
+	RemoveButton,
+} from './Checkout-item.style';
 
 const CheckoutItem = ({ cartItem }) => {
 	const dispatch = useDispatch();
@@ -16,25 +24,21 @@ const CheckoutItem = ({ cartItem }) => {
 	const { name, imageUrl, price, quantity } = cartItem;
 
 	return (
-		<div className='checkout-item'>
-			<div className='image-container'>
+		<CheckoutItemContainer>
+			<ImageContainer>
 				<img src={imageUrl} alt='item' />
-			</div>
-			<span className='name'>{name}</span>
-			<span className='quantity'>
-				<div className='arrow' onClick={() => DecreaseQuantity(cartItem)}>
-					&#10094;
-				</div>
-				<span className='value'> {quantity}</span>
-				<div className='arrow' onClick={() => AddCartItem(cartItem)}>
-					&#10095;
-				</div>
-			</span>
-			<span className='price'>₺{price}</span>
-			<div className='remove-button' onClick={() => RemoveCartItem(cartItem)}>
+			</ImageContainer>
+			<SpanWidth23>{name}</SpanWidth23>
+			<Quantity>
+				<Arrow onClick={() => DecreaseQuantity(cartItem)}>&#10094;</Arrow>
+				<Value> {quantity}</Value>
+				<Arrow onClick={() => AddCartItem(cartItem)}>&#10095;</Arrow>
+			</Quantity>
+			<SpanWidth23>₺{price}</SpanWidth23>
+			<RemoveButton onClick={() => RemoveCartItem(cartItem)}>
 				&#10005;
-			</div>
-		</div>
+			</RemoveButton>
+		</CheckoutItemContainer>
 	);
 };
 

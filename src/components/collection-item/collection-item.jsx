@@ -1,7 +1,5 @@
 import React from 'react';
 
-import './Collection-item.scss';
-
 import { useDispatch } from 'react-redux';
 import { addCartItem } from '../../redux/cart/cart.actions';
 import {

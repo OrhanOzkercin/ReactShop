@@ -1,6 +1,5 @@
 import React from 'react';
 
-import './Cart-item.scss';
 import {
 	CartItemContainer,
 	CustomImage,

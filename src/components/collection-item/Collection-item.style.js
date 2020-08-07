@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import CustomButton from '../custom-button/Custom-botton';
 
 export const CollectionItemContainer = styled.div`
@@ -8,6 +8,7 @@ export const CollectionItemContainer = styled.div`
 	height: 350px;
 	align-items: center;
 	position: relative;
+	margin-bottom: 10px;
 	&:hover {
 		.image {
 			opacity: 0.8;

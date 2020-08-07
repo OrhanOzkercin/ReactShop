@@ -37,7 +37,7 @@ function App() {
 		};
 		// eslint-disable-next-line
 	}, [dispatch]);
-
+	console.log(currentUser);
 	return (
 		<div className='App'>
 			<Header />

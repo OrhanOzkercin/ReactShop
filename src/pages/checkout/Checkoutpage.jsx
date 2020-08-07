@@ -1,6 +1,5 @@
 import React from 'react';
 
-import './Checkoutpage.scss';
 import { useSelector } from 'react-redux';
 import {
 	selectCartItems,
@@ -8,43 +7,50 @@ import {
 } from '../../redux/cart/cart.selectors';
 import CheckoutItem from '../../components/checkout-item/Checkout-item';
 import StripeCheckoutButton from '../../components/stripe-button/Stripe-button';
+import {
+	CheckoutPageContainer,
+	CheckoutHeader,
+	HeaderBlock,
+	Total,
+	Warning,
+} from './Checkoutpage.style';
 
 const CheckoutPage = () => {
 	const cartItems = useSelector((state) => selectCartItems(state));
 	const cartItemsTotalCost = useSelector((state) => selectCartTotalCost(state));
 
 	return (
-		<div className='checkout-page'>
-			<div className='checkout-header'>
-				<div className='header-block'>
+		<CheckoutPageContainer>
+			<CheckoutHeader>
+				<HeaderBlock>
 					<span>Product</span>
-				</div>
-				<div className='header-block'>
+				</HeaderBlock>
+				<HeaderBlock>
 					<span>Description</span>
-				</div>
-				<div className='header-block'>
+				</HeaderBlock>
+				<HeaderBlock>
 					<span>Quantity</span>
-				</div>
-				<div className='header-block'>
+				</HeaderBlock>
+				<HeaderBlock>
 					<span>Price</span>
-				</div>
-				<div className='header-block'>
+				</HeaderBlock>
+				<HeaderBlock>
 					<span>Remove</span>
-				</div>
-			</div>
+				</HeaderBlock>
+			</CheckoutHeader>
 			{cartItems.map((item) => (
 				<CheckoutItem key={item.id} cartItem={item} />
 			))}
-			<div className='total'>
+			<Total>
 				<span>TOTAL ₺{cartItemsTotalCost}</span>
-			</div>
-			<div className='test-warning'>
+			</Total>
+			<Warning>
 				*Please use credit card information below for test-warning
 				<br />
 				4242 4242 4242 4242 4242 - Exp: 01/21 - CVV: 123
-			</div>
+			</Warning>
 			<StripeCheckoutButton price={cartItemsTotalCost} />
-		</div>
+		</CheckoutPageContainer>
 	);
 };
 

@@ -6,38 +6,44 @@ const SHOP_DATA = {
 		items: [
 			{
 				id: 1,
-				name: 'Brown Brim',
-				imageUrl: 'https://i.ibb.co/ZYW3VTp/brown-brim.png',
+				name: 'Summer Style',
+				imageUrl:
+					'https://images.unsplash.com/photo-1565465295423-68c959a599ba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=676&q=80',
 				price: 25,
 			},
 			{
 				id: 2,
-				name: 'Blue Beanie',
-				imageUrl: 'https://i.ibb.co/ypkgK0X/blue-beanie.png',
+				name: 'Orange Classic',
+				imageUrl:
+					'https://images.unsplash.com/photo-1521119989659-a83eee488004?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=664&q=80',
 				price: 18,
 			},
 			{
 				id: 3,
-				name: 'Brown Cowboy',
-				imageUrl: 'https://i.ibb.co/QdJwgmp/brown-cowboy.png',
+				name: 'Orange Cap',
+				imageUrl:
+					'https://images.unsplash.com/photo-1593724707119-304c12f7cf56?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
 				price: 35,
 			},
 			{
 				id: 4,
-				name: 'Grey Brim',
-				imageUrl: 'https://i.ibb.co/RjBLWxB/grey-brim.png',
+				name: 'Black Classic',
+				imageUrl:
+					'https://images.unsplash.com/photo-1525428020182-b3da25c7ae7d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80',
 				price: 25,
 			},
 			{
 				id: 5,
-				name: 'Green Beanie',
-				imageUrl: 'https://i.ibb.co/YTjW3vF/green-beanie.png',
+				name: 'Red Cool Lady',
+				imageUrl:
+					'https://images.unsplash.com/photo-1551734413-5943d61e002a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80',
 				price: 18,
 			},
 			{
 				id: 6,
-				name: 'Palm Tree Cap',
-				imageUrl: 'https://i.ibb.co/rKBDvJX/palm-tree-cap.png',
+				name: 'Beauty Orange',
+				imageUrl:
+					'https://images.unsplash.com/photo-1579542145952-05fd27275991?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=687&q=80',
 				price: 14,
 			},
 			{
@@ -67,51 +73,59 @@ const SHOP_DATA = {
 		items: [
 			{
 				id: 10,
-				name: 'Adidas NMD',
-				imageUrl: 'https://i.ibb.co/0s3pdnc/adidas-nmd.png',
-				price: 220,
+				name: 'Nike Air Drop',
+				imageUrl:
+					'https://images.unsplash.com/photo-1581619818895-ab2029baf938?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80',
+				price: 600,
 			},
 			{
 				id: 11,
-				name: 'Adidas Yeezy',
-				imageUrl: 'https://i.ibb.co/dJbG1cT/yeezy.png',
-				price: 280,
+				name: 'Nike Air F1',
+				imageUrl:
+					'https://images.unsplash.com/photo-1581067675198-463d66478d0e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1239&q=80',
+				price: 680,
 			},
 			{
 				id: 12,
-				name: 'Black Converse',
-				imageUrl: 'https://i.ibb.co/bPmVXyP/black-converse.png',
-				price: 110,
+				name: 'Adidas Classic',
+				imageUrl:
+					'https://images.unsplash.com/photo-1558191053-c03db2757e3d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
+				price: 410,
 			},
 			{
 				id: 13,
-				name: 'Nike White AirForce',
-				imageUrl: 'https://i.ibb.co/1RcFPk0/white-nike-high-tops.png',
-				price: 160,
+				name: 'Adidas Greyforce',
+				imageUrl:
+					'https://images.unsplash.com/photo-1556803471-c9eb6d50eb1e?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80',
+				price: 440,
 			},
 			{
 				id: 14,
-				name: 'Nike Red High Tops',
-				imageUrl: 'https://i.ibb.co/QcvzydB/nikes-red.png',
-				price: 160,
+				name: 'Adidas Blackshadow',
+				imageUrl:
+					'https://images.unsplash.com/photo-1529062815681-c5145b0ac7b5?ixlib=rb-1.2.1&auto=format&fit=crop&w=701&q=80',
+				price: 560,
 			},
 			{
 				id: 15,
-				name: 'Nike Brown High Tops',
-				imageUrl: 'https://i.ibb.co/fMTV342/nike-brown.png',
-				price: 160,
+				name: 'New Balance Roadmap',
+				imageUrl:
+					'https://images.unsplash.com/photo-1586294310459-93fd1c8dcb4d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
+				price: 360,
 			},
 			{
 				id: 16,
-				name: 'Air Jordan Limited',
-				imageUrl: 'https://i.ibb.co/w4k6Ws9/nike-funky.png',
-				price: 190,
+				name: 'Vans Black',
+				imageUrl:
+					'https://images.unsplash.com/photo-1485736231968-0c8ad5c9e174?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
+				price: 590,
 			},
 			{
 				id: 17,
-				name: 'Timberlands',
-				imageUrl: 'https://i.ibb.co/Mhh6wBg/timberlands.png',
-				price: 200,
+				name: 'Vans Creme',
+				imageUrl:
+					'https://images.unsplash.com/photo-1595179562588-e73fd557ef00?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
+				price: 500,
 			},
 		],
 	},
@@ -122,33 +136,38 @@ const SHOP_DATA = {
 		items: [
 			{
 				id: 18,
-				name: 'Black Jean Shearling',
-				imageUrl: 'https://i.ibb.co/XzcwL5s/black-shearling.png',
+				name: 'Green Jean Shearling',
+				imageUrl:
+					'https://images.unsplash.com/photo-1544022613-e87ca75a784a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80',
 				price: 125,
 			},
 			{
 				id: 19,
-				name: 'Blue Jean Jacket',
-				imageUrl: 'https://i.ibb.co/mJS6vz0/blue-jean-jacket.png',
-				price: 90,
+				name: 'Black Cool ',
+				imageUrl:
+					'https://images.unsplash.com/photo-1551016514-f5df89acb36c?ixlib=rb-1.2.1&auto=format&fit=crop&w=701&q=80',
+				price: 190,
 			},
 			{
 				id: 20,
-				name: 'Grey Jean Jacket',
-				imageUrl: 'https://i.ibb.co/N71k1ML/grey-jean-jacket.png',
-				price: 90,
+				name: 'Blue Jean Jacket',
+				imageUrl:
+					'https://images.unsplash.com/photo-1551537482-f2075a1d41f2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80',
+				price: 130,
 			},
 			{
 				id: 21,
-				name: 'Brown Shearling',
-				imageUrl: 'https://i.ibb.co/s96FpdP/brown-shearling.png',
-				price: 165,
+				name: 'Grey Tuff',
+				imageUrl:
+					'https://images.unsplash.com/photo-1548712370-806c729f72ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
+				price: 265,
 			},
 			{
 				id: 22,
-				name: 'Tan Trench',
-				imageUrl: 'https://i.ibb.co/M6hHc3F/brown-trench.png',
-				price: 185,
+				name: 'Black Shearling',
+				imageUrl:
+					'https://images.unsplash.com/flagged/photo-1578398297852-4d2bfe74cefe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=635&q=80',
+				price: 285,
 			},
 		],
 	},
@@ -159,45 +178,52 @@ const SHOP_DATA = {
 		items: [
 			{
 				id: 23,
-				name: 'Blue Tanktop',
-				imageUrl: 'https://i.ibb.co/7CQVJNm/blue-tank.png',
-				price: 25,
+				name: 'Striped Top',
+				imageUrl:
+					'https://images.unsplash.com/photo-1530981785497-a62037228fe9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80',
+				price: 55,
 			},
 			{
 				id: 24,
-				name: 'Floral Blouse',
-				imageUrl: 'https://i.ibb.co/4W2DGKm/floral-blouse.png',
-				price: 20,
+				name: 'Red Blouse',
+				imageUrl:
+					'https://images.unsplash.com/photo-1586448773336-7777388c8a9d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=675&q=80',
+				price: 30,
 			},
 			{
 				id: 25,
-				name: 'Floral Dress',
-				imageUrl: 'https://i.ibb.co/KV18Ysr/floral-skirt.png',
+				name: 'Blue Dress',
+				imageUrl:
+					'https://images.unsplash.com/photo-1587301427108-933c0d3ce321?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80',
 				price: 80,
 			},
 			{
 				id: 26,
-				name: 'Red Dots Dress',
-				imageUrl: 'https://i.ibb.co/N3BN1bh/red-polka-dot-dress.png',
-				price: 80,
+				name: 'Jean Short',
+				imageUrl:
+					'https://images.unsplash.com/photo-1587557250504-d3175ac5ce0d?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80',
+				price: 110,
 			},
 			{
 				id: 27,
-				name: 'Striped Sweater',
-				imageUrl: 'https://i.ibb.co/KmSkMbH/striped-sweater.png',
-				price: 45,
+				name: 'White Dress',
+				imageUrl:
+					'https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80',
+				price: 145,
 			},
 			{
 				id: 28,
-				name: 'Yellow Track Suit',
-				imageUrl: 'https://i.ibb.co/v1cvwNf/yellow-track-suit.png',
+				name: 'Light Blue Dress	',
+				imageUrl:
+					'https://images.unsplash.com/photo-1518905806784-7afa475beb82?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80',
 				price: 135,
 			},
 			{
 				id: 29,
-				name: 'White Blouse',
-				imageUrl: 'https://i.ibb.co/qBcrsJg/white-vest.png',
-				price: 20,
+				name: 'Orange Blouse',
+				imageUrl:
+					'https://images.unsplash.com/photo-1578587018452-892bacefd3f2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80',
+				price: 40,
 			},
 		],
 	},
@@ -208,39 +234,45 @@ const SHOP_DATA = {
 		items: [
 			{
 				id: 30,
-				name: 'Camo Down Vest',
-				imageUrl: 'https://i.ibb.co/xJS0T3Y/camo-vest.png',
-				price: 325,
+				name: 'White shirt',
+				imageUrl:
+					'https://images.unsplash.com/photo-1545596281-a183a368b1d0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=633&q=80',
+				price: 75,
 			},
 			{
 				id: 31,
-				name: 'Floral T-shirt',
-				imageUrl: 'https://i.ibb.co/qMQ75QZ/floral-shirt.png',
-				price: 20,
+				name: 'Lumberjacl Shirtt',
+				imageUrl:
+					'https://images.unsplash.com/photo-1550091346-1e823a403e60?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=633&q=80ps://i.ibb.co/qMQ75QZ/floral-shirt.png',
+				price: 80,
 			},
 			{
 				id: 32,
-				name: 'Black & White Longsleeve',
-				imageUrl: 'https://i.ibb.co/55z32tw/long-sleeve.png',
-				price: 25,
+				name: 'Jean Coat',
+				imageUrl:
+					'https://images.unsplash.com/photo-1576339458004-2d6ba7051dcc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=635&q=80',
+				price: 125,
 			},
 			{
 				id: 33,
-				name: 'Pink T-shirt',
-				imageUrl: 'https://i.ibb.co/RvwnBL8/pink-shirt.png',
-				price: 25,
+				name: 'Rose T-shirt',
+				imageUrl:
+					'https://images.unsplash.com/photo-1527534156596-5ba1e6d5f017?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=635&q=80',
+				price: 45,
 			},
 			{
 				id: 34,
-				name: 'Jean Long Sleeve',
-				imageUrl: 'https://i.ibb.co/VpW4x5t/roll-up-jean-shirt.png',
-				price: 40,
+				name: 'Georger Orwell Tshirt',
+				imageUrl:
+					'https://images.unsplash.com/photo-1530286910461-6a1960d1e83a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
+				price: 50,
 			},
 			{
 				id: 35,
-				name: 'Burgundy T-shirt',
-				imageUrl: 'https://i.ibb.co/mh3VM1f/polka-dot-shirt.png',
-				price: 25,
+				name: 'Green T-shirt',
+				imageUrl:
+					'https://images.unsplash.com/photo-1519058082700-08a0b56da9b4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80',
+				price: 35,
 			},
 		],
 	},

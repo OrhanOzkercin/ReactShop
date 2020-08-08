@@ -32,7 +32,7 @@ const INITIAL_STATE = {
 		{
 			title: 'mens',
 			imageUrl:
-				'https://images.unsplash.com/photo-1488161628813-04466f872be2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80',
+				'https://images.unsplash.com/photo-1524383902853-96c857a3c78d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
 			size: 'large',
 			id: 5,
 			linkUrl: 'shop/mens',

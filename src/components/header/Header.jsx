@@ -24,7 +24,7 @@ const Header = () => {
 		<>
 			<HeaderContainer>
 				<LogoContainer to='/'>
-					<Logo className='logo' />
+					<Logo />
 				</LogoContainer>
 				<Options>
 					<Option to='/shop'>Shop</Option>

@@ -49,20 +49,16 @@ const SHOP_DATA = {
 			{
 				id: 7,
 				name: 'Red Beanie',
-				imageUrl: 'https://i.ibb.co/bLB646Z/red-beanie.png',
-				price: 18,
+				imageUrl:
+					'https://images.unsplash.com/photo-1529008338-310c24f458ac?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=675&q=80',
+				price: 28,
 			},
 			{
 				id: 8,
-				name: 'Wolf Cap',
-				imageUrl: 'https://i.ibb.co/1f2nWMM/wolf-cap.png',
-				price: 14,
-			},
-			{
-				id: 9,
-				name: 'Blue Snapback',
-				imageUrl: 'https://i.ibb.co/X2VJP2W/blue-snapback.png',
-				price: 16,
+				name: 'Cool Brown Cap',
+				imageUrl:
+					'https://images.unsplash.com/photo-1575846171058-979e0c211b54?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
+				price: 34,
 			},
 		],
 	},

@@ -11,6 +11,8 @@ import Header from './components/header/Header';
 import Signinsignup from './pages/signinsignup/Signinsignup';
 import { selectCurrentUser } from './redux/user/user.selectors';
 import Checkoutpage from './pages/checkout/Checkoutpage';
+import Footer from './components/footer/Footer';
+import ContactPage from './pages/contact/Contactpage';
 
 function App() {
 	const currentUser = useSelector((state) => selectCurrentUser(state));
@@ -43,6 +45,7 @@ function App() {
 			<Header />
 			<Switch>
 				<Route exact path='/' component={HomePage} />
+				<Route exact path='/contact' component={ContactPage} />
 				<Route path='/shop' component={ShopPage} />
 				<Route
 					exact
@@ -51,6 +54,7 @@ function App() {
 				/>
 				<Route path='/checkout' component={Checkoutpage} />
 			</Switch>
+			<Footer />
 		</div>
 	);
 }

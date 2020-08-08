@@ -5,7 +5,7 @@ const Footer = () => {
 	return (
 		<FooterContainer>
 			<Copyright>
-				Made with 💖 in Izmir by{' '}
+				Made with 💖 in Izmir by
 				<Link href='https://orhanozkercin.com'>Orhan Ozkercin</Link>
 			</Copyright>
 		</FooterContainer>
